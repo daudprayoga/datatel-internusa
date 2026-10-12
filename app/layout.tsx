@@ -68,9 +68,16 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  const settings = await prisma.setting.findUnique({
-    where: { id: 1 },
-  }).catch(() => null)
+  let settings: any = null
+  if (process.env.DATABASE_URL) {
+    try {
+      settings = await prisma.setting.findUnique({
+        where: { id: 1 },
+      }).catch(() => null)
+    } catch {
+      settings = null
+    }
+  }
 
   const gtmId = (settings as any)?.googleTagManagerId
   const companyName = settings?.companyName || "PT. Datatel Inter Nusa"
