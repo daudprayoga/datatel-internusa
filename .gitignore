@@ -18,9 +18,11 @@ build/
 *.tsbuildinfo
 
 # Raw template archives & duplicates (runtime code uses public/assets)
-sandbox320/
-assets/
-demo21.html
+/sandbox320/
+/assets/
+/demo21.html
+/public/assets/media/
+/public/assets/php/
 
 # Scratch test scripts
 check-db.ts
