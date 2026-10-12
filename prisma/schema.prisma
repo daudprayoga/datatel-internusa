@@ -1,0 +1,254 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Blog {
+  id          String    @id @default(cuid())
+  title       String
+  slug        String    @unique
+  excerpt     String    @db.Text
+  content     String    @db.Text
+  category    String
+  status      String    @default("draft") // "draft", "published", "scheduled"
+  thumbnail   String
+  author      String    @default("Admin")
+  publishedAt DateTime? // Jika diset ke masa depan, artikel terjadwal
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model BlogCategory {
+  id        String   @id @default(cuid())
+  name      String   @unique
+  slug      String   @unique
+  createdAt DateTime @default(now())
+}
+
+model Portfolio {
+  id           String   @id @default(cuid())
+  name         String
+  description  String   @db.Text
+  client       String
+  category     String
+  technologies Json     // Menyimpan array string, contoh: ["Next.js", "PostgreSQL"]
+  image        String
+  link         String?
+  isPinned     Boolean  @default(false) // Jika true, tampil paling atas
+  createdAt    DateTime @default(now())
+}
+
+model Message {
+  id             String    @id @default(cuid())
+  name           String
+  email          String
+  phone          String
+  subject        String
+  message        String    @db.Text
+  status         String    @default("unread") // "unread" atau "read"
+  followUpStatus String    @default("Belum Follow Up") // "Belum Follow Up", "Hot", "Cold"
+  followUpNotes  String?   @db.Text // Keterangan hasil follow up manual
+  followedBy     String?   // Nama staf/admin yang melakukan follow up
+  followedAt     DateTime? // Tanggal dan waktu follow up
+  createdAt      DateTime  @default(now())
+}
+
+model Service {
+  id          String @id @default(cuid())
+  name        String
+  description String @db.Text
+  icon        String // Contoh: "Globe", "Code", "Smartphone", "Palette"
+  features    Json   // Menyimpan array string: ["Feature 1", "Feature 2"]
+  packages    Json   // Menyimpan array object, contoh: [{"name": "Basic", "price": "Rp 3.500.000", "features": ["..."]}]
+}
+
+model Setting {
+  id                Int    @id @default(1)
+  companyName       String
+  email             String
+  phone             String
+  address           String
+  description       String @db.Text
+  socialMedia       Json   // Menyimpan object: {"facebook": "...", "instagram": "..."}
+  googleAnalyticsId     String?
+  googleAdsConversionId String?
+  googleTagManagerId    String?
+}
+
+model User {
+  id             String          @id @default(cuid())
+  name           String
+  email          String          @unique
+  password       String          // Password hash
+  roleId         String
+  role           Role            @relation(fields: [roleId], references: [id])
+  clientServices ClientService[]
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+
+  // CRM fields (Client Management)
+  companyName    String?         // Nama Perusahaan
+  phone          String?         // Nomor HP
+  address        String?         @db.Text // Alamat
+  pic            String?         // PIC
+  notes          String?         @db.Text // Catatan
+  status         String?         @default("Active") // "Active", "Prospect", "Follow Up", "Waiting", "Inactive"
+  projects       Project[]       @relation("ClientProjects")
+  followUps      FollowUp[]      @relation("ClientFollowUps")
+  supportTickets SupportTicket[]
+  ticketMessages TicketMessage[]
+  invoices       Invoice[]
+}
+
+model ClientService {
+  id             String    @id @default(cuid())
+  userId         String
+  user           User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  domainName     String    // Domain / Nama Layanan
+  serviceType    String    @default("Domain") // "Domain", "Hosting", "VPS", "Dedicated Server", "SSL", "Email Account", "Website Maintenance"
+  provider       String?
+  package        String?
+  serverIp       String?
+  username       String?
+  quantity       Int       @default(1)
+  unit           String    @default("Unit") // e.g. "Unit", "service", "Account", "Tahun"
+  expiredDate    DateTime?
+  purchaseDate   DateTime?
+  renewalDate    DateTime?
+  price          String?
+  hpp            String?   // Harga Pokok Penjualan (HPP)
+  status         String    @default("Active") // "Active", "Renewal Soon", "Expired", "Suspended", "Cancelled"
+  notes          String?   @db.Text
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+model MasterService {
+  id          String   @id @default(cuid())
+  name        String   // Nama Layanan / Paket (e.g. "Cloud Hosting Pro 2GB")
+  serviceType String   @default("Hosting") // "Domain", "Hosting", "VPS", "Dedicated Server", "SSL", "Email Account", "Website Maintenance", "Lainnya"
+  price       String?  // Harga Jual (Biaya)
+  hpp         String?  // Harga HPP Modal
+  unit        String   @default("Tahun") // "Tahun", "Bulan", "Unit", "Account"
+  provider    String?  // Provider default
+  notes       String?  @db.Text
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Invoice {
+  id              String        @id @default(cuid())
+  invoiceNumber   String        @unique
+  date            DateTime      @default(now())
+  dueDate         DateTime?
+  userId          String?
+  user            User?         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  clientName      String
+  clientAddress   String?
+  clientPhone     String?
+  clientFax       String?
+  subtotal        Float         @default(0)
+  discountAmount  Float         @default(0)
+  taxPercent      Float         @default(11)
+  taxAmount       Float         @default(0)
+  total           Float         @default(0)
+  paidAmount      Float         @default(0)
+  remainingAmount Float         @default(0)
+  status          String        @default("Unpaid") // "Paid", "Unpaid", "Partial"
+  sentStatus      String        @default("Belum Dikirim") // "Belum Dikirim", "WA", "Email", "WA & Email"
+  sentAt          DateTime?
+  paymentMethod   String?       @default("Transfer Bank") // "Transfer Bank", "Tunai", "QRIS", "E-Wallet", "Kartu Kredit"
+  notes           String?       @db.Text
+  items           InvoiceItem[]
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+}
+
+model InvoiceItem {
+  id          String   @id @default(cuid())
+  invoiceId   String
+  invoice     Invoice  @relation(fields: [invoiceId], references: [id], onDelete: Cascade)
+  description String
+  quantity    Int      @default(1)
+  unit        String   @default("Unit")
+  unitPrice   Float    @default(0)
+  discount    Float    @default(0)
+  totalPrice  Float    @default(0)
+}
+
+model Project {
+  id           String    @id @default(cuid())
+  name         String
+  userId       String
+  user         User      @relation("ClientProjects", fields: [userId], references: [id], onDelete: Cascade)
+  pic          String
+  deadline     DateTime?
+  startDate    DateTime?
+  endDate      DateTime?
+  progress     Int       @default(0)
+  description  String?   @db.Text
+  status       String    // "Planning", "Development", "Waiting Client", "Revision", "Testing", "Completed", "Cancelled"
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+}
+
+model FollowUp {
+  id           String    @id @default(cuid())
+  userId       String
+  user         User      @relation("ClientFollowUps", fields: [userId], references: [id], onDelete: Cascade)
+  date         DateTime
+  type         String    // "WhatsApp", "Email", "Telepon", "Meeting"
+  notes        String    @db.Text
+  nextFollowUp DateTime?
+  picInternal  String
+  status       String    // "Open", "Follow Up", "Waiting Client", "Closed"
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+}
+
+
+
+model Role {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  permissions Json     // Menyimpan array string: ["create", "read", "edit", "update"]
+  users       User[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Partner {
+  id        String   @id @default(cuid())
+  name      String
+  logo      String   // Path/URL logo partner
+  link      String?  // Link opsional ke website partner
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model SupportTicket {
+  id          String          @id @default(cuid())
+  title       String          // Judul Tiket (misal: "Kendala Hosting", "Pertanyaan Proyek")
+  category    String          // Kategori (Technical, Billing, Project, Other)
+  status      String          @default("Open") // Open, In Progress, Resolved, Closed
+  priority    String          @default("Medium") // Low, Medium, High
+  userId      String
+  user        User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  messages    TicketMessage[]
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+}
+
+model TicketMessage {
+  id        String        @id @default(cuid())
+  ticketId  String
+  ticket    SupportTicket @relation(fields: [ticketId], references: [id], onDelete: Cascade)
+  senderId  String
+  sender    User          @relation(fields: [senderId], references: [id], onDelete: Cascade)
+  message   String        @db.Text
+  createdAt DateTime      @default(now())
+}

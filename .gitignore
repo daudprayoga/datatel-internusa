@@ -1,0 +1,29 @@
+# Node dependencies & Next.js build
+node_modules/
+.next/
+out/
+build/
+
+# Environment variables
+.env
+.env*.local
+
+# Vercel
+.vercel/
+
+# OS and temp files
+.DS_Store
+._*
+*.log
+*.tsbuildinfo
+
+# Raw template archives & duplicates (runtime code uses public/assets)
+sandbox320/
+assets/
+demo21.html
+
+# Scratch test scripts
+check-db.ts
+test-create.ts
+test-prisma.ts
+test-ticket-creation.ts

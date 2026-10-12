@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 80" fill="none">
+  <!-- Symbol / Icon -->
+  <g transform="translate(10, 10)">
+    <!-- Outer Shield / Data Network Hexagon -->
+    <path d="M30 2L55 16V44L30 58L5 44V16L30 2Z" fill="url(#brandGradient)" opacity="0.15" />
+    <path d="M30 2L55 16V44L30 58L5 44V16L30 2Z" stroke="url(#brandGradient)" stroke-width="2.5" stroke-linejoin="round" />
+    
+    <!-- Central Network Node Connections -->
+    <circle cx="30" cy="30" r="7" fill="#00a86b" />
+    <circle cx="30" cy="14" r="4.5" fill="#0284c7" />
+    <circle cx="44" cy="38" r="4.5" fill="#0284c7" />
+    <circle cx="16" cy="38" r="4.5" fill="#0284c7" />
+    
+    <!-- Connector Lines -->
+    <path d="M30 18.5V23" stroke="#00a86b" stroke-width="2.5" stroke-linecap="round" />
+    <path d="M34 33L40 36.5" stroke="#00a86b" stroke-width="2.5" stroke-linecap="round" />
+    <path d="M26 33L20 36.5" stroke="#00a86b" stroke-width="2.5" stroke-linecap="round" />
+    
+    <!-- Signal Wave Accent -->
+    <path d="M41 12C46 16 48 21 48 27" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 3" opacity="0.8" />
+    <path d="M19 12C14 16 12 21 12 27" stroke="#0284c7" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 3" opacity="0.8" />
+  </g>
+
+  <!-- Typography -->
+  <g transform="translate(85, 20)">
+    <!-- DATATEL -->
+    <text x="0" y="27" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="28" letter-spacing="1.5" fill="#0f172a">
+      DATA<tspan fill="#00a86b">TEL</tspan>
+    </text>
+    
+    <!-- INTER NUSA -->
+    <text x="142" y="27" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="20" letter-spacing="3" fill="#0284c7">
+      INTER NUSA
+    </text>
+    
+    <!-- Subtitle -->
+    <text x="2" y="44" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="9.5" letter-spacing="1.8" fill="#64748b">
+      COMPUTER NETWORK &amp; SYSTEM INTEGRATORS
+    </text>
+  </g>
+
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="brandGradient" x1="5" y1="2" x2="55" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#00a86b" />
+    </linearGradient>
+  </defs>
+</svg>
