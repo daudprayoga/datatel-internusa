@@ -1,16 +1,11 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import localFont from 'next/font/local'
 import { Analytics } from '@vercel/analytics/next'
 import { Toaster } from 'sonner'
 import './globals.css'
 import Script from 'next/script'
 import prisma from '@/lib/db'
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter"
-});
+import { FloatingWhatsApp } from '@/components/floating-whatsapp'
 
 // Sandbox template typeface (sandbox320/dist/assets/fonts/urbanist)
 const urbanist = localFont({
@@ -82,30 +77,31 @@ export default async function RootLayout({
   const gtmId = (settings as any)?.googleTagManagerId
   const companyName = settings?.companyName || "PT. Datatel Inter Nusa"
   const email = settings?.email || "sales@datatel-internusa.com"
-  const phone = settings?.phone || "+62 21 5790 1453"
-  const address = settings?.address || "Jl. Penjernihan I No.30, Bendungan Hilir, Jakarta Pusat 10210"
+  const phone = settings?.phone || "+62 21 8773 4050"
+  const address = settings?.address || "Jl. Kelapa Dua Wetan No. 31, Jakarta, 13730"
 
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": companyName,
-    "image": "https://www.datatel-internusa.com/datatel-logo.svg",
+    "image": "https://www.datatel-internusa.com/datatel-logo.png",
     "@id": "https://www.datatel-internusa.com/#localbusiness",
+
     "url": "https://www.datatel-internusa.com",
     "telephone": phone,
     "email": email,
     "address": {
       "@type": "PostalAddress",
       "streetAddress": address,
-      "addressLocality": "Jakarta Pusat",
-      "postalCode": "10210",
+      "addressLocality": "Jakarta",
+      "postalCode": "13730",
       "addressCountry": "ID"
     }
   }
 
   return (
     <html lang="id">
-      <body className={`${inter.variable} ${urbanist.variable} font-sans antialiased overflow-x-hidden`}>
+      <body className={`${urbanist.variable} font-sans antialiased overflow-x-hidden`}>
         {/* Google Tag Manager — noscript fallback (harus jadi elemen pertama di dalam body) */}
         {gtmId && (
           <noscript>
@@ -123,6 +119,49 @@ export default async function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         {children}
+        <Script id="data-cue-animation" strategy="afterInteractive">
+          {`
+            (() => {
+              const reveal = (element) => {
+                const delay = element.getAttribute('data-delay');
+                if (delay) element.style.transitionDelay = delay + 'ms';
+                element.classList.add('cue-visible');
+              };
+              const watched = new WeakSet();
+              const observeElements = (root = document) => {
+                const elements = root.querySelectorAll ? root.querySelectorAll('[data-cue]') : [];
+                elements.forEach((element) => {
+                  if (watched.has(element)) return;
+                  watched.add(element);
+                  if (!('IntersectionObserver' in window)) {
+                    reveal(element);
+                  } else {
+                    observer.observe(element);
+                  }
+                });
+              };
+              const observer = 'IntersectionObserver' in window
+                ? new IntersectionObserver((entries, currentObserver) => {
+                    entries.forEach((entry) => {
+                      if (entry.isIntersecting) {
+                        reveal(entry.target);
+                        currentObserver.unobserve(entry.target);
+                      }
+                    });
+                  }, { threshold: 0.12 })
+                : null;
+              observeElements();
+              new MutationObserver((mutations) => {
+                mutations.forEach((mutation) => {
+                  mutation.addedNodes.forEach((node) => {
+                    if (node.nodeType === 1) observeElements(node);
+                  });
+                });
+              }).observe(document.body, { childList: true, subtree: true });
+            })();
+          `}
+        </Script>
+        <FloatingWhatsApp />
         <Toaster richColors position="top-right" />
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

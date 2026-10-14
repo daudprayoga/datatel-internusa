@@ -24,6 +24,7 @@ export const metadata: Metadata = {
 
 const data: ServicePageData = {
   title: "Networking System",
+  heroImage: "/assets/img/photos/networking-system.png",
   description:
     "Total IT consulting & implementation services designed to Simplify your IT infrastructure/System with your business objective.",
   overview: {
@@ -72,10 +73,6 @@ const data: ServicePageData = {
       ],
     },
   ],
-  cta: {
-    title: "Need a Reliable Enterprise Network?",
-    description: "Discuss your LAN/WAN assessment, network blueprint, or migration project with PT. Datatel Inter Nusa engineers.",
-  },
 }
 
 export default function NetworkingSystemPage() {

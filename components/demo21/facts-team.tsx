@@ -55,7 +55,7 @@ export function Demo21FactsTeam() {
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center mb-16 sm:mb-20">
           
           <div className="lg:col-span-4 text-center lg:text-left">
-            <h2 className="text-sm font-bold uppercase tracking-widest text-[#3f78e0] mb-3">
+            <h2 className="text-sm font-bold uppercase tracking-widest text-[#b02d3a] mb-3">
               Company Facts
             </h2>
             <h3 className="text-3xl sm:text-4xl lg:text-[40px] font-extrabold text-[#343f52] leading-tight mb-4">
@@ -72,7 +72,7 @@ export function Demo21FactsTeam() {
                 const Icon = fact.icon
                 return (
                   <div key={idx} className="flex flex-col items-center">
-                    <div className="w-14 h-14 rounded-full bg-[#edf2fc] text-[#3f78e0] flex items-center justify-center mb-4">
+                    <div className="w-14 h-14 rounded-full bg-[#fdf2f3] text-[#b02d3a] flex items-center justify-center mb-4">
                       <Icon className="w-7 h-7" />
                     </div>
                     <h4 className="text-3xl sm:text-4xl font-extrabold text-[#343f52] mb-1">
@@ -119,9 +119,9 @@ export function Demo21FactsTeam() {
               </p>
 
               <div className="flex items-center gap-3 text-[#60697b] mt-auto">
-                <a href="#" className="hover:text-[#3f78e0] transition-colors"><Twitter className="w-4 h-4" /></a>
-                <a href="#" className="hover:text-[#3f78e0] transition-colors"><Facebook className="w-4 h-4" /></a>
-                <a href="#" className="hover:text-[#3f78e0] transition-colors"><Dribbble className="w-4 h-4" /></a>
+                <a href="#" className="hover:text-[#b02d3a] transition-colors"><Twitter className="w-4 h-4" /></a>
+                <a href="#" className="hover:text-[#b02d3a] transition-colors"><Facebook className="w-4 h-4" /></a>
+                <a href="#" className="hover:text-[#b02d3a] transition-colors"><Dribbble className="w-4 h-4" /></a>
               </div>
             </div>
           ))}

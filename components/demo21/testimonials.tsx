@@ -42,12 +42,12 @@ const testimonials = [
 
 export function Demo21Testimonials() {
   return (
-    <section id="testimonials" className="bg-[#edf2fc] py-20 sm:py-28">
+    <section id="testimonials" className="bg-[#fdf2f3] py-20 sm:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-16 sm:mb-20">
-          <h2 className="text-sm font-bold uppercase tracking-widest text-[#3f78e0] mb-3">
+          <h2 className="text-sm font-bold uppercase tracking-widest text-[#b02d3a] mb-3">
             Happy Customers
           </h2>
           <h3 className="text-3xl sm:text-4xl lg:text-[40px] font-extrabold text-[#343f52] leading-tight">

@@ -3,7 +3,7 @@ import { Demo21Navbar } from "@/components/demo21/navbar"
 import { Demo21Footer } from "@/components/demo21/footer"
 import { ScrollToTop } from "@/components/demo21/scroll-to-top"
 import { PageHeader } from "@/components/demo21/page-header"
-import { ContactSection } from "@/components/contact/contact-section"
+import { Demo15ContactInfo } from "@/components/demo15/contact-info"
 
 export const metadata: Metadata = {
   title: "Contact Us | PT. Datatel Inter Nusa",
@@ -24,12 +24,11 @@ export default function ContactPage() {
         <PageHeader
           badge="Get in Touch"
           title="Contact Us"
-          description="Have any questions or need enterprise IT infrastructure consulting? Reach out to us from our contact form and our team will get back to you shortly."
+          description="Have questions or need enterprise IT infrastructure consulting? Our team is ready to help."
           breadcrumb={[{ label: "Contact Us" }]}
         />
 
-        {/* Contact Form & Company Details Section */}
-        <ContactSection />
+        <Demo15ContactInfo />
       </main>
 
       <Demo21Footer />

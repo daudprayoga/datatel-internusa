@@ -22,6 +22,7 @@ export const metadata: Metadata = {
 
 const data: ServicePageData = {
   title: "Access Control",
+  heroImage: "/assets/img/photos/access-control.png",
   description:
     "Controlling access to your premises and its assets is fundamental to safeguarding your employees and business.",
   overview: {

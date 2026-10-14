@@ -71,7 +71,7 @@ export function ServiceDetailSection({
             
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-5">
-              <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#3f78e0] px-3 py-1 rounded-full bg-[#edf2fc]">
+              <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#b02d3a] px-3 py-1 rounded-full bg-[#fdf2f3]">
                 {badge}
               </span>
 
@@ -95,7 +95,7 @@ export function ServiceDetailSection({
                       key={i}
                       className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-50 border border-slate-200 text-xs font-semibold text-[#343f52]"
                     >
-                      <ShieldCheck className="w-4 h-4 text-[#3f78e0]" />
+                      <ShieldCheck className="w-4 h-4 text-[#b02d3a]" />
                       {std}
                     </span>
                   ))}
@@ -106,17 +106,17 @@ export function ServiceDetailSection({
               <div className="pt-4 flex flex-wrap items-center gap-4">
                 <Link
                   href="/hubungi-kami"
-                  className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-[#3f78e0] hover:bg-[#3264c1] text-white text-sm font-semibold shadow-md shadow-[#3f78e0]/20 transition-all gap-2"
+                  className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-[#b02d3a] hover:bg-[#8f202b] text-white text-sm font-semibold shadow-md shadow-[#b02d3a]/20 transition-all gap-2"
                 >
                   Konsultasikan Kebutuhan Anda
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <a
-                  href="tel:+622157901453"
+                  href="tel:+622187734050"
                   className="inline-flex items-center gap-2 px-5 py-3.5 rounded-full bg-slate-100 hover:bg-slate-200 text-[#343f52] text-sm font-semibold transition-colors"
                 >
-                  <Phone className="w-4 h-4 text-[#3f78e0]" />
-                  +62 21 5790 1453
+                  <Phone className="w-4 h-4 text-[#b02d3a]" />
+                  +62 21 8773 4050
                 </a>
               </div>
             </div>
@@ -136,7 +136,7 @@ export function ServiceDetailSection({
                   <div className="p-6 bg-white border-t border-slate-100">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-xl bg-[#edf2fc] flex items-center justify-center text-[#3f78e0]">
+                        <div className="w-10 h-10 rounded-xl bg-[#fdf2f3] flex items-center justify-center text-[#b02d3a]">
                           <Award className="w-5 h-5" />
                         </div>
                         <div>
@@ -165,7 +165,7 @@ export function ServiceDetailSection({
       <section className="py-16 sm:py-20 bg-slate-50/60 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#3f78e0] mb-2 block">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#b02d3a] mb-2 block">
               Ruang Lingkup Solusi
             </span>
             <h3 className="text-2xl sm:text-3xl font-extrabold text-[#343f52] leading-tight">
@@ -180,10 +180,10 @@ export function ServiceDetailSection({
             {deliverables.map((item, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:shadow-lg hover:border-[#3f78e0]/40 transition-all flex flex-col justify-between"
+                className="p-6 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:shadow-lg hover:border-[#b02d3a]/40 transition-all flex flex-col justify-between"
               >
                 <div>
-                  <div className="w-10 h-10 rounded-xl bg-[#edf2fc] flex items-center justify-center text-[#3f78e0] mb-4">
+                  <div className="w-10 h-10 rounded-xl bg-[#fdf2f3] flex items-center justify-center text-[#b02d3a] mb-4">
                     <CheckCircle2 className="w-5 h-5" />
                   </div>
                   <h4 className="text-base font-bold text-[#343f52] mb-2 leading-snug">
@@ -203,7 +203,7 @@ export function ServiceDetailSection({
       <section className="py-16 sm:py-20 bg-white border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#3f78e0] mb-2 block">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#b02d3a] mb-2 block">
               Metodologi Kerja
             </span>
             <h3 className="text-2xl sm:text-3xl font-extrabold text-[#343f52] leading-tight">
@@ -218,9 +218,9 @@ export function ServiceDetailSection({
             {steps.map((st) => (
               <div
                 key={st.num}
-                className="p-6 rounded-2xl bg-slate-50 border border-slate-200/70 hover:border-[#3f78e0] hover:bg-white transition-all shadow-xs"
+                className="p-6 rounded-2xl bg-slate-50 border border-slate-200/70 hover:border-[#b02d3a] hover:bg-white transition-all shadow-xs"
               >
-                <div className="text-2xl font-black text-[#3f78e0] mb-3">
+                <div className="text-2xl font-black text-[#b02d3a] mb-3">
                   {st.num}
                 </div>
                 <h4 className="text-base font-bold text-[#343f52] mb-2">
@@ -236,7 +236,7 @@ export function ServiceDetailSection({
       </section>
 
       {/* 4. Bottom Fast Consultation Banner */}
-      <section className="py-14 sm:py-16 bg-[#edf2fc]">
+      <section className="py-14 sm:py-16 bg-[#fdf2f3]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h3 className="text-2xl sm:text-3xl font-extrabold text-[#343f52] mb-3">
             Siap Memulai Proyek Bersama Datatel?
@@ -247,7 +247,7 @@ export function ServiceDetailSection({
           <div className="flex flex-wrap justify-center items-center gap-4">
             <Link
               href="/hubungi-kami"
-              className="px-8 py-3.5 rounded-full bg-[#3f78e0] hover:bg-[#3264c1] text-white text-sm font-semibold shadow-md transition-all"
+              className="px-8 py-3.5 rounded-full bg-[#b02d3a] hover:bg-[#8f202b] text-white text-sm font-semibold shadow-md transition-all"
             >
               Hubungi Kami Sekarang
             </Link>

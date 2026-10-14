@@ -22,6 +22,7 @@ export const metadata: Metadata = {
 
 const data: ServicePageData = {
   title: "Digital CCTV",
+  heroImage: "/assets/img/photos/digital-cctv.png",
   description:
     "We supply and install traditional CCTV systems and also CCTV over IP (Computer networks), internally and externally.",
   overview: {

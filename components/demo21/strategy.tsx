@@ -35,7 +35,7 @@ export function Demo21Strategy() {
                 className={`bg-white rounded-2xl p-6 sm:p-7 shadow-xl shadow-slate-200/60 border border-slate-100/80 transition-transform duration-300 hover:-translate-y-1 ${step.offset}`}
               >
                 <div className="flex items-start sm:items-center gap-5">
-                  <div className="w-12 h-12 rounded-full bg-[#edf2fc] text-[#3f78e0] font-black text-lg flex items-center justify-center shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-[#fdf2f3] text-[#b02d3a] font-black text-lg flex items-center justify-center shrink-0">
                     {step.number}
                   </div>
                   <div>
@@ -53,7 +53,7 @@ export function Demo21Strategy() {
 
           {/* Right: Strategy Content */}
           <div className="lg:col-span-6">
-            <h2 className="text-sm font-bold uppercase tracking-widest text-[#3f78e0] mb-3">
+            <h2 className="text-sm font-bold uppercase tracking-widest text-[#b02d3a] mb-3">
               Our Strategy
             </h2>
             <h3 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#343f52] leading-tight mb-6">
@@ -69,7 +69,7 @@ export function Demo21Strategy() {
 
             <Link
               href="#contact"
-              className="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-[#3f78e0] hover:bg-[#3264c1] text-white text-base font-semibold shadow-md hover:shadow-lg transition-all"
+              className="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-[#b02d3a] hover:bg-[#8f202b] text-white text-base font-semibold shadow-md hover:shadow-lg transition-all"
             >
               Learn More
             </Link>

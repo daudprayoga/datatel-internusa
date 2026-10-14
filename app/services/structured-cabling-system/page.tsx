@@ -23,6 +23,7 @@ export const metadata: Metadata = {
 
 const data: ServicePageData = {
   title: "Structured Cabling Systems Certified",
+  heroImage: "/assets/img/photos/structured-cabling.png",
   description:
     "A structured cabling system provides a universal platform upon which an overall information system's strategy is built.",
   overview: {

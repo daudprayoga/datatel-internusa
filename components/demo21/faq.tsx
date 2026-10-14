@@ -37,7 +37,7 @@ export function Demo21FAQ() {
           
           {/* Left Content */}
           <div className="lg:col-span-5">
-            <h2 className="text-sm font-bold uppercase tracking-widest text-[#3f78e0] mb-3">
+            <h2 className="text-sm font-bold uppercase tracking-widest text-[#b02d3a] mb-3">
               FAQ
             </h2>
             <h3 className="text-3xl sm:text-4xl lg:text-[40px] font-extrabold text-[#343f52] leading-tight mb-5">
@@ -48,7 +48,7 @@ export function Demo21FAQ() {
             </p>
             <Link
               href="#contact"
-              className="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-[#3f78e0] hover:bg-[#3264c1] text-white text-base font-semibold shadow-md hover:shadow-lg transition-all"
+              className="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-[#b02d3a] hover:bg-[#8f202b] text-white text-base font-semibold shadow-md hover:shadow-lg transition-all"
             >
               All FAQ
             </Link>
@@ -65,11 +65,11 @@ export function Demo21FAQ() {
                 >
                   <button
                     onClick={() => setOpenId(isOpen ? "" : item.id)}
-                    className="w-full flex items-center justify-between p-6 text-left font-bold text-[#343f52] hover:text-[#3f78e0] transition-colors focus:outline-none"
+                    className="w-full flex items-center justify-between p-6 text-left font-bold text-[#343f52] hover:text-[#b02d3a] transition-colors focus:outline-none"
                   >
                     <span className="text-base sm:text-lg">{item.question}</span>
                     <ChevronDown
-                      className={`w-5 h-5 text-[#3f78e0] transition-transform duration-300 shrink-0 ml-4 ${
+                      className={`w-5 h-5 text-[#b02d3a] transition-transform duration-300 shrink-0 ml-4 ${
                         isOpen ? "rotate-180" : ""
                       }`}
                     />

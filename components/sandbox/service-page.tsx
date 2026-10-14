@@ -28,6 +28,7 @@ export interface ServiceFeature {
 export interface ServicePageData {
   title: string
   description: string
+  heroImage?: string
   overview: {
     eyebrow: string
     title: string
@@ -50,7 +51,7 @@ export interface ServicePageData {
     items: ServiceFeature[]
     columns?: 3 | 4
   }[]
-  cta: { title: string; description: string }
+  cta?: { title: string; description: string }
 }
 
 /** Shared Sandbox layout for every page under /services/*. */
@@ -64,9 +65,10 @@ export function ServicePage({ data }: { data: ServicePageData }) {
 
       <main>
         <PageHeader
-          badge="Our Services"
+          badge={data.heroImage ? undefined : "Our Services"}
           title={data.title}
           description={data.description}
+          backgroundImage={data.heroImage}
           breadcrumb={[{ label: "Services", href: "/services" }, { label: data.title }]}
         />
 
@@ -96,8 +98,8 @@ export function ServicePage({ data }: { data: ServicePageData }) {
                 <Button href="/hubungi-kami" icon={<ArrowRight className="w-4 h-4 order-last" />}>
                   Konsultasikan Bersama Kami
                 </Button>
-                <Button href="tel:+622157901453" variant="white" icon={<Phone className="w-4 h-4 text-sb-primary" />}>
-                  (021) 5790 1453
+                <Button href="tel:+622187734050" variant="white" icon={<Phone className="w-4 h-4 text-sb-primary" />}>
+                  +62 21 8773 4050
                 </Button>
               </div>
             </div>
@@ -165,7 +167,7 @@ export function ServicePage({ data }: { data: ServicePageData }) {
 
         {/* 3 ── CTA */}
         <div className="pt-16 md:pt-24 bg-white">
-          <CtaBanner title={cta.title} description={cta.description} />
+          {cta && <CtaBanner title={cta.title} description={cta.description} />}
         </div>
       </main>
 

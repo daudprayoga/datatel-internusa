@@ -22,6 +22,7 @@ export const metadata: Metadata = {
 
 const data: ServicePageData = {
   title: "Data Center, Design & Build",
+  heroImage: "/assets/img/photos/data-center.png",
   description:
     "Designing to implementing the Data Center in accordance with the International Standard TIA-942.",
   overview: {

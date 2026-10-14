@@ -223,7 +223,7 @@ export default async function NewsPage({
                     PT. Datatel Inter Nusa adalah National Private Enterprise terdepan yang berfokus pada Computer Network &amp; System Integrators sejak 2005 di seluruh Indonesia.
                   </p>
                   <Link
-                    href="/vision-mission"
+                    href="/about"
                     className="sb-more text-xs font-bold"
                   >
                     Learn About Our Company
@@ -323,11 +323,11 @@ export default async function NewsPage({
                   </p>
                   <div className="space-y-2">
                     <a
-                      href="tel:+622157901453"
+                      href="tel:+622187734050"
                       className="sb-btn sb-btn-primary sb-btn-sm w-full"
                     >
                       <Phone className="w-3.5 h-3.5 mr-1" />
-                      (021) 5790 1453
+                      +62 21 8773 4050
                     </a>
                     <a
                       href="mailto:sales@datatel-internusa.com"

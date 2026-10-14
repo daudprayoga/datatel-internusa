@@ -62,7 +62,7 @@ export function Demo21LatestProjects() {
         
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
-          <h2 className="text-sm font-bold uppercase tracking-widest text-[#3f78e0] mb-3">
+          <h2 className="text-sm font-bold uppercase tracking-widest text-[#b02d3a] mb-3">
             Latest Projects
           </h2>
           <h3 className="text-3xl sm:text-4xl lg:text-[40px] font-extrabold text-[#343f52] leading-tight">
@@ -83,7 +83,7 @@ export function Demo21LatestProjects() {
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
-                <h4 className="text-xl font-bold text-[#343f52] group-hover:text-[#3f78e0] transition-colors mb-1">
+                <h4 className="text-xl font-bold text-[#343f52] group-hover:text-[#b02d3a] transition-colors mb-1">
                   <Link href={item.href}>{item.title}</Link>
                 </h4>
                 <p className="text-xs font-bold uppercase tracking-wider text-[#aab0bc]">
@@ -97,14 +97,14 @@ export function Demo21LatestProjects() {
           <div className="flex items-center justify-center gap-3 mt-10">
             <button
               onClick={prevSlide}
-              className="w-11 h-11 rounded-full bg-[#edf2fc] text-[#3f78e0] hover:bg-[#3f78e0] hover:text-white transition-colors flex items-center justify-center shadow-xs"
+              className="w-11 h-11 rounded-full bg-[#fdf2f3] text-[#b02d3a] hover:bg-[#b02d3a] hover:text-white transition-colors flex items-center justify-center shadow-xs"
               aria-label="Previous project"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
             <button
               onClick={nextSlide}
-              className="w-11 h-11 rounded-full bg-[#edf2fc] text-[#3f78e0] hover:bg-[#3f78e0] hover:text-white transition-colors flex items-center justify-center shadow-xs"
+              className="w-11 h-11 rounded-full bg-[#fdf2f3] text-[#b02d3a] hover:bg-[#b02d3a] hover:text-white transition-colors flex items-center justify-center shadow-xs"
               aria-label="Next project"
             >
               <ChevronRight className="w-5 h-5" />
@@ -119,7 +119,7 @@ export function Demo21LatestProjects() {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1440 100"
-          className="w-full h-auto text-[#edf2fc] fill-current block"
+          className="w-full h-auto text-[#fdf2f3] fill-current block"
           preserveAspectRatio="none"
         >
           <path d="M1260,1.65c-60-5.07-119.82,2.47-179.83,10.13s-120,11.48-180,9.57-120-7.66-180-6.42c-60,1.63-120,11.21-180,16a1129.52,1129.52,0,0,1-180,0c-60-4.78-120-14.36-180-19.14S60,7,30,7H0v93H1440V30.89C1380.07,23.2,1319.93,6.15,1260,1.65Z" />

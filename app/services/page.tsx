@@ -4,7 +4,6 @@ import { Demo21Footer } from "@/components/demo21/footer"
 import { ScrollToTop } from "@/components/demo21/scroll-to-top"
 import { PageHeader } from "@/components/demo21/page-header"
 import { Demo21Services } from "@/components/demo21/services"
-import { CtaBanner } from "@/components/sandbox/ui"
 
 export const metadata: Metadata = {
   title: "Services & Solutions | PT. Datatel Inter Nusa",
@@ -27,10 +26,6 @@ export default function ServicesPage() {
 
         <Demo21Services tone="white" />
 
-        <CtaBanner
-          title="Tidak yakin solusi mana yang tepat?"
-          description="Tim engineer kami siap membantu assessment kebutuhan infrastruktur IT perusahaan Anda."
-        />
       </main>
 
       <Demo21Footer />

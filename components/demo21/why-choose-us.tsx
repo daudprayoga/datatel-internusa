@@ -26,7 +26,7 @@ export function Demo21WhyChooseUs() {
   const [openId, setOpenId] = useState<string>("one")
 
   return (
-    <section id="why-us" className="relative bg-gradient-to-b from-white to-[#edf2fc] pt-14 pb-0 overflow-hidden">
+    <section id="why-us" className="relative bg-gradient-to-b from-white to-[#fdf2f3] pt-14 pb-0 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 lg:mb-20">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-14 items-center">
           
@@ -45,7 +45,7 @@ export function Demo21WhyChooseUs() {
 
           {/* Right Content & Accordion */}
           <div className="lg:col-span-5">
-            <h2 className="text-sm font-bold uppercase tracking-widest text-[#3f78e0] mb-3">
+            <h2 className="text-sm font-bold uppercase tracking-widest text-[#b02d3a] mb-3">
               Why Choose Us?
             </h2>
             <h3 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#343f52] leading-tight mb-8">
@@ -63,11 +63,11 @@ export function Demo21WhyChooseUs() {
                   >
                     <button
                       onClick={() => setOpenId(isOpen ? "" : item.id)}
-                      className="w-full flex items-center justify-between p-5 text-left font-bold text-[#343f52] hover:text-[#3f78e0] transition-colors focus:outline-none"
+                      className="w-full flex items-center justify-between p-5 text-left font-bold text-[#343f52] hover:text-[#b02d3a] transition-colors focus:outline-none"
                     >
                       <span className="text-base sm:text-lg">{item.title}</span>
                       <ChevronDown
-                        className={`w-5 h-5 text-[#3f78e0] transition-transform duration-300 shrink-0 ml-3 ${
+                        className={`w-5 h-5 text-[#b02d3a] transition-transform duration-300 shrink-0 ml-3 ${
                           isOpen ? "rotate-180" : ""
                         }`}
                       />

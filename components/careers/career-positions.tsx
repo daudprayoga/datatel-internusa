@@ -7,6 +7,13 @@ import { jobOpenings, type JobOpening } from "@/lib/careers-data"
 export function CareerPositionsList() {
   const [selectedJob, setSelectedJob] = useState<JobOpening | null>(null)
 
+  const createApplicationHref = (job: JobOpening) => {
+    const subject = `Lamaran Kerja: ${job.title} - [Nama Anda]`
+    const body = `Halo Tim HRD PT. Datatel Inter Nusa,\n\nSaya bermaksud mengajukan lamaran untuk posisi ${job.title} (${job.jobType}).\nBerikut terlampir CV dan portofolio pendukung saya.\n\nTerima kasih.`
+
+    return `mailto:recruitment@datatel-internusa.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+  }
+
   return (
     <div>
       {/* 3-Column Card Grid matching reference layout, styled with site theme */}
@@ -147,13 +154,7 @@ export function CareerPositionsList() {
                 </button>
 
                 <a
-                  href={`mailto:recruitment@datatel-internusa.com?subject=Lamaran Kerja: ${encodeURIComponent(
-                    selectedJob.title
-                  )} - [Nama Anda]&body=Halo Tim HRD PT. Datatel Inter Nusa,%0D%0A%0D%0ASaya bermaksud mengajukan lamaran untuk posisi ${encodeURIComponent(
-                    selectedJob.title
-                  )} (${encodeURIComponent(
-                    selectedJob.jobType
-                  )}).%0D%0ABerikut terlampir CV dan portofolio pendukung saya.%0D%0A%0D%0ATerima kasih.`}
+                  href={createApplicationHref(selectedJob)}
                   className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-5 py-2 rounded-xl bg-sb-primary hover:bg-sb-primary-dark text-white text-xs font-bold transition-all shadow-xs"
                 >
                   <Send className="w-3.5 h-3.5" />

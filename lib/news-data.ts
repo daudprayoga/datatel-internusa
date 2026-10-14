@@ -45,7 +45,7 @@ export const newsArticles: NewsItem[] = [
     content: [
       "PT. Datatel Inter Nusa is pleased to announce our updated central corporate directory and operations center in Jakarta to streamline communications with our growing enterprise client base across Indonesia.",
       "As a National Private Enterprise focusing on Computer Network & System Integrators since 2005, we continue expanding our support infrastructure, warehouse spare-part hubs, and engineering command facilities.",
-      "HEAD OFFICE & OPERATIONS DIRECTORY:\n\n1. Central Operational Office:\nJl. Penjernihan I No.30, Bendungan Hilir, Jakarta Pusat 10210, Indonesia\nTelephone: +62 21 5790 1453\nFax: +62 21 5790 2213\n\n2. Operations & Logistics Facility:\nJl. Raya Kelapa Dua Wetan No.31, Ciracas, Jakarta Timur 13730, Indonesia\nTelephone: +62 21 8773 4050\n\n3. Sales & Consulting Desk:\nEmail: sales@datatel-internusa.com\nWebsite: https://www.datatel-internusa.com",
+      "CORPORATE CONTACT DIRECTORY:\n\nAddress:\nJl. Kelapa Dua Wetan No. 31, Jakarta, 13730\nTelephone: +62 21 8773 4050\nEmail: sales@datatel-internusa.com\nWebsite: https://www.datatel-internusa.com",
       "Clients and business partners are welcome to reach out to our account executives and solutions architects during normal business hours (Monday to Friday, 08:30 - 17:30 WIB) or via our 24/7 emergency maintenance link for SLA contract holders.",
     ],
     galleryImages: [

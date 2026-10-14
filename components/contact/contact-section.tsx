@@ -275,9 +275,8 @@ export function ContactSection() {
                   <div>
                     <h5 className="mb-1 text-base font-bold text-[#343f52]">Address</h5>
                     <address className="not-italic text-sm text-[#60697b] leading-relaxed">
-                      Jl. Penjernihan I No.30<br />
-                      Bendungan Hilir, Jakarta 10210<br />
-                      Indonesia
+                      Jl. Kelapa Dua Wetan No. 31<br />
+                      Jakarta, 13730
                     </address>
                   </div>
                 </div>
@@ -290,11 +289,9 @@ export function ContactSection() {
                   <div>
                     <h5 className="mb-1 text-base font-bold text-[#343f52]">Phone</h5>
                     <p className="text-sm text-[#60697b] leading-relaxed">
-                      <a href="tel:+622157901453" className="hover:text-[#3f78e0] transition-colors font-medium">
-                        +62 21 5790 1453
+                      <a href="tel:+622187734050" className="hover:text-[#3f78e0] transition-colors font-medium">
+                        +62 21 8773 4050
                       </a>
-                      <br />
-                      <span className="text-[#60697b]">+62 21 5790 2213 (Fax)</span>
                     </p>
                   </div>
                 </div>

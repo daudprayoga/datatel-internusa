@@ -5,7 +5,7 @@ import { Home, ArrowLeft, PhoneCall } from "lucide-react"
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50 text-[#60697b] font-sans antialiased selection:bg-[#3f78e0] selection:text-white">
+    <div className="min-h-screen flex flex-col bg-slate-50 text-[#60697b] font-sans antialiased selection:bg-[#b02d3a] selection:text-white">
       <Demo21Navbar />
 
       <main className="flex-1 flex items-center justify-center py-20 px-4 sm:px-6 lg:px-8">

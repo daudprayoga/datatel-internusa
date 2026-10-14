@@ -34,7 +34,7 @@ export function Demo21Hero() {
             <h1 className="text-4xl sm:text-5xl lg:text-[54px] font-extrabold tracking-tight text-[#343f52] leading-[1.15] mb-5">
               An IT network & system integrator specializing in{" "}
               <span
-                className={`inline-block text-[#3f78e0] transition-opacity duration-300 ${fade ? "opacity-100" : "opacity-0"
+                className={`inline-block text-[#b02d3a] transition-opacity duration-300 ${fade ? "opacity-100" : "opacity-0"
                   }`}
               >
                 {rotatingWords[wordIndex]}
@@ -48,7 +48,7 @@ export function Demo21Hero() {
             <div>
               <Link
                 href="/services"
-                className="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-[#3f78e0] hover:bg-[#3264c1] text-white text-base font-semibold shadow-md hover:shadow-lg transition-all"
+                className="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-[#b02d3a] hover:bg-[#8f202b] text-white text-base font-semibold shadow-md hover:shadow-lg transition-all"
               >
                 Our Services
               </Link>
@@ -99,7 +99,7 @@ export function Demo21Hero() {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1440 100"
-          className="w-full h-auto text-[#edf2fc] fill-current block"
+          className="w-full h-auto text-[#fdf2f3] fill-current block"
           preserveAspectRatio="none"
         >
           <path d="M1260,1.65c-60-5.07-119.82,2.47-179.83,10.13s-120,11.48-180,9.57-120-7.66-180-6.42c-60,1.63-120,11.21-180,16a1129.52,1129.52,0,0,1-180,0c-60-4.78-120-14.36-180-19.14S60,7,30,7H0v93H1440V30.89C1380.07,23.2,1319.93,6.15,1260,1.65Z" />

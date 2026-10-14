@@ -393,11 +393,11 @@ export default async function NewsDetailPage({
                   </p>
                   <div className="space-y-2">
                     <a
-                      href="tel:+622157901453"
+                      href="tel:+622187734050"
                       className="sb-btn sb-btn-primary sb-btn-sm w-full"
                     >
                       <Phone className="w-3.5 h-3.5 mr-1" />
-                      (021) 5790 1453
+                      +62 21 8773 4050
                     </a>
                     <a
                       href="mailto:sales@datatel-internusa.com"
