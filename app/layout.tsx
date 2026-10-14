@@ -78,7 +78,7 @@ export default async function RootLayout({
   const companyName = settings?.companyName || "PT. Datatel Inter Nusa"
   const email = settings?.email || "sales@datatel-internusa.com"
   const phone = settings?.phone || "+62 21 8773 4050"
-  const address = settings?.address || "Jl. Kelapa Dua Wetan No. 31, Jakarta, 13730"
+  const address = settings?.address || "Jl. Raya Klp. Dua Wetan No.31, RT.3/RW.4, Klp. Dua Wetan, Kec. Ciracas, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13730"
 
   const jsonLd = {
     "@context": "https://schema.org",

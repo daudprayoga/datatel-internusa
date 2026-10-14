@@ -77,7 +77,9 @@ export function Demo15Footer() {
               <li className="flex gap-3">
                 <MapPin className="w-4 h-4 mt-0.5 text-[#b02d3a] shrink-0" />
                 <address className="not-italic leading-relaxed text-[#cacdd3]">
-                  Jl. Kelapa Dua Wetan No. 31 , Jakarta, 13730
+                  Jl. Raya Klp. Dua Wetan No.31, RT.3/RW.4,<br />
+                  Klp. Dua Wetan, Kec. Ciracas, Kota Jakarta Timur,<br />
+                  Daerah Khusus Ibukota Jakarta 13730
                 </address>
               </li>
               <li className="flex gap-3">

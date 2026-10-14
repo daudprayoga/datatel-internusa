@@ -19,7 +19,7 @@ export function Demo15ContactInfo() {
             <div className="relative z-10 h-[360px] overflow-hidden rounded-2xl border-4 border-white bg-[#f4f1ee] shadow-2xl sm:h-[430px]">
               <iframe
                 title="Lokasi PT. Datatel Inter Nusa"
-                src="https://www.google.com/maps?q=Jl.+Kelapa+Dua+Wetan+No.+31,+Jakarta,+13730,+Indonesia&output=embed"
+                src="https://www.google.com/maps?q=PT.+Datatel+Inter+Nusa&ll=-6.3319723,106.8866797&z=19&output=embed"
                 className="h-full w-full border-0"
                 loading="lazy"
               />

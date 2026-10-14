@@ -275,8 +275,9 @@ export function ContactSection() {
                   <div>
                     <h5 className="mb-1 text-base font-bold text-[#343f52]">Address</h5>
                     <address className="not-italic text-sm text-[#60697b] leading-relaxed">
-                      Jl. Kelapa Dua Wetan No. 31<br />
-                      Jakarta, 13730
+                      Jl. Raya Klp. Dua Wetan No.31, RT.3/RW.4,<br />
+                      Klp. Dua Wetan, Kec. Ciracas, Kota Jakarta Timur,<br />
+                      Daerah Khusus Ibukota Jakarta 13730
                     </address>
                   </div>
                 </div>
